@@ -53,3 +53,25 @@ MedKG-Core can be used in the following scenarios:
 - Clinical decision support knowledge base construction
 - Medical data governance and standardization
 - Graph-based medical information retrieval
+
+## Availability and Requirements
+
+- **Project name:** MedKG-Core
+
+- **Project home page:** https://github.com/TonyQAQ/MedKG-Core
+
+- **Operating system(s):** Platform independent.
+
+- **Project type:** Medical knowledge graph construction and query platform
+
+- **Supported data types:** Structured, semi-structured, and unstructured medical data
+
+- **Core features:** Multi-user task management, medical annotation, graph construction, graph query
+
+- **Programming language:** Java
+
+- **Optional requirements:** Docker and Docker Compose
+
+- **License:** MIT License
+
+- **Any restrictions to use by non-academics:** No
