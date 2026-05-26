@@ -16,7 +16,7 @@ The project focuses on medical data governance, medical annotation, clinical kno
 
 - **Multi-source medical data support**
   - Structured data: database tables, forms, standard medical datasets.
-  - Semi-structured data: JSON, XML, CSV, Excel, medical records with fixed fields.
+  - Semi-structured data: Word, TXT, medical records with fixed fields.
   - Unstructured data: clinical notes, discharge summaries, medical documents, guidelines, and research text.
 
 - **Medical knowledge graph construction**
@@ -40,13 +40,6 @@ The project focuses on medical data governance, medical annotation, clinical kno
   - Path query.
   - Graph-based knowledge retrieval.
   - Support for downstream medical AI applications.
-
-- **Medical data governance**
-  - Data standardization.
-  - Metadata management.
-  - Data quality control.
-  - Terminology mapping.
-  - Traceability of graph construction process.
 
 ## Application Scenarios
 
