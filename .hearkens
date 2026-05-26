@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hearkenProject>
+      <projectKey>$HKKnowledgeStudio</projectKey>
+      <projectVersion>4</projectVersion>
+      <attributes>
+            <attribute name="databaseBookmark" value="HKKSKF"/>
+            <attribute name="cacheSynchronized" value="false"/>
+      </attributes>
+</hearkenProject>

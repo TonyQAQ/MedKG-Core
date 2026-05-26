@@ -1,0 +1,87 @@
+.mds-showAtlas-serchBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.mds-showAtlas-serchWrap {
+    width: 312px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mds-showAtlas-listWrap {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+
+    .ant-list-items {
+        .ant-list-item {
+            .ant-list-item-meta {
+                cursor: pointer;
+                margin-right: 5px;
+                padding: 5px;
+                border-radius: 5px;
+
+                &:hover {
+                    background: #dbf0ff;
+                }
+
+            }
+        }
+    }
+}
+
+.mds-showAtlas-liSelect {
+    background-color: #cceaff;
+}
+
+.mds-showAtlas-wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.mds-showAtlas-drawerUl {
+    .mds-showAtlas-liWrap {
+        height: 50px;
+        line-height: 30px;
+        padding: 10px 5px;
+        text-align: left;
+        border: 1px solid #abdcff;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #cceaff;
+        }
+    }
+
+    .mds-showAtlas-liWrap:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.mds-showAtlas-liCommon {
+    background: #effaff;
+}
+
+.mds-showAtlas-liSelect {
+    background-color: #cceaff;
+}
+
+#echarts-wrap {
+    height: 100%;
+    flex: 1;
+}
+
+.mds-showAtlas-listDescription {
+    p {
+        word-break: break-all;
+    }
+}
+
+.mds-showAtlas-pagination {
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+.mds-usMarkingTraining-bodyWrap {
+    padding: 20px 90px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mds-usMarkingTraining-headWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mds-usMarkingTraining-middleWrap {
+    margin: 10px 0;
+    flex: 1;
+    overflow: hidden;
+
+    .ant-spin-nested-loading {
+        height: 100%;
+    }
+}
+
+#svgMainAllContainer {
+    border: 1px solid #dddddd;
+    height: 100%;
+    overflow-y: auto;
+
+    .svgMainContainer {
+        padding: 20px 30px;
+        border-bottom: 1px solid #dddddd;
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+        svg{
+            width: 100%;
+        }
+    }
+}
+
+.mds-usMarkingTraining-btns{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}

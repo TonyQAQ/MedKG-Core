@@ -1,0 +1,246 @@
+@import '../common.less';
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.mds-actionsWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: @base-box-shadow;
+    border-radius: @base-border-radius;
+    padding: 5px 10px;
+}
+
+.mds-conditionWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.mds-layout-wrap {
+    overflow: hidden;
+
+    .trigger {
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px -6px 9px 0px;
+    }
+
+    .trigger:hover {
+        color: #1890ff;
+    }
+}
+
+.mds-siderMenu-ripplesWrap {
+    display: flex;
+    margin: 0 12px 0 10px;
+
+    &:hover {
+        background: rgba(199, 199, 199, 0.2);
+        border-radius: @base-border-radius;
+    }
+}
+
+.mds-siderMenu-ripples {
+    .anticon {
+        margin-left: 15px !important;
+    }
+
+    color: #575962;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mds-siderMenu-wrap {
+    position: relative;
+    flex: 1;
+    overflow: hidden auto;
+}
+
+.mds-siderMenu-wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.mds-table-actionWrap {
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(221, 221, 221, 0.3);
+    }
+}
+
+.mds-siderMenu-titleChildren {
+    text-align: center;
+    margin-left: 37px;
+}
+
+.site-layout {
+    background-color: #F9FBFD;
+}
+
+.mds-layout-peopleInfoWrap {
+    &>span {
+        font-size: 17px;
+        margin-left: 15px;
+        white-space: nowrap;
+    }
+
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 30px;
+}
+
+.mds-siderMenu-wrap>li.ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title,
+.ant-menu-submenu .ant-menu-item {
+    padding: 0 !important;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+    display: none;
+}
+
+.ant-menu-item-active,
+.ant-menu-item:hover,
+.ant-menu-submenu-title:hover,
+.ant-menu-item-selected,
+.ant-menu-submenu-selected,
+.ant-menu-submenu-inline {
+    >.ant-menu-submenu-title:hover {
+
+        .ant-menu-submenu-arrow::before,
+        .ant-menu-submenu-arrow::after {
+            color: #161616 !important;
+        }
+    }
+
+    color: #161616 !important;
+}
+
+.ant-menu-item a:hover {
+    color: #575962;
+}
+
+.ant-menu-submenu-inline {
+    >.ant-menu-submenu-title:hover {
+
+        .ant-menu-submenu-arrow::before,
+        .ant-menu-submenu-arrow::after {
+            background: linear-gradient(to right, #161616, #161616);
+        }
+    }
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: transparent;
+}
+
+
+.ant-menu-item-selected {
+    font-weight: 600;
+
+    .mds-siderMenu-ripplesWrap {
+        animation: ripplesBackGround 0.2s forwards;
+        box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1), 4px 4px 15px -5px rgba(21, 114, 232, .4);
+
+        border-radius: @base-border-radius;
+
+        .mds-siderMenu-ripples {
+            color: #ffffff !important;
+        }
+    }
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+    background: transparent;
+}
+
+.ant-layout {
+    min-height: unset;
+}
+
+.ant-layout-sider {
+    box-shadow: rgba(69, 65, 78, 0.06) 4px 4px 10px;
+}
+
+.ant-menu-vertical {
+    .ant-menu-submenu-title {
+        padding: 0 !important;
+    }
+}
+
+
+
+
+.ant-menu-inline-collapsed {
+    .mds-siderMenu-ripplesWrap {
+        margin: 0 10px 0 4px;
+    }
+
+    .anticon {
+        margin-left: 25px !important;
+    }
+}
+
+
+
+.ant-tooltip-inner {
+    .mds-siderMenu-title {
+        color: #ffffff;
+    }
+}
+
+.ant-layout-sider-children {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-layout-sider-collapsed {
+    .mds-layout-peopleInfoWrap {
+        flex-direction: column;
+
+        &>span {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+}
+
+.ant-menu-item-selected a {
+    &:hover {
+        color: #ffffff;
+    }
+
+    color: #ffffff;
+}
+
+@keyframes ripplesBackGround {
+    from {
+        background: transparent;
+    }
+
+    to {
+        background: #1572e8;
+    }
+}

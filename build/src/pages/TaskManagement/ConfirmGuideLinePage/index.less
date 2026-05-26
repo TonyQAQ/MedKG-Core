@@ -1,0 +1,65 @@
+.mds-guideLine-btns {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-top: 1px solid #dddddd;
+}
+
+.mds-guideLine-head {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &>p {
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+
+        &::before {
+            content: '';
+            width: 3px;
+            margin-right: 20px;
+            background: #5A8BFF;
+        }
+    }
+}
+
+.mds-guideLine-headContent {
+    min-height: 100px;
+    max-height: 200px;
+    text-indent: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*! autoprefixer: off */
+    display: -webkit-box;
+    /* autoprefixer: on */
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.mds-guideLine-tabWrap {
+    flex: 1;
+    overflow-y: auto;
+    .ant-tabs-tab {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .ant-tabs-nav::before {
+        content: '';
+        width: 3px;
+        margin: 10px 20px 0 0;
+        height: 28px;
+        background: #5A8BFF;
+        position: relative;
+    }
+}
+
+
+.mds-guideLine-svgPageNation {
+    text-align: center;
+    width: 100%;
+    background: white;
+    position: sticky;
+    bottom: 0px;
+}

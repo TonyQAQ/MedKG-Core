@@ -1,0 +1,114 @@
+.mds-formalMark-trigger {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px -6px 9px 0px;
+    background: white;
+}
+
+.mds-formalMark-rightWrap {
+    padding: 5px 20px 10px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    .ant-spin-nested-loading {
+        flex: 1;
+    }
+}
+
+.mds-formalMark-btns {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mds-formalMark-svgPageNation {
+    width: 100%;
+    text-align: center;
+}
+
+.mds-formalMark-rightHead {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mds-guideLine-tabWrap {
+    flex: 1;
+    overflow-y: auto;
+
+    .ant-tabs-tab {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .ant-tabs-nav::before {
+        content: '';
+        width: 3px;
+        margin: 10px 20px 0 0;
+        height: 28px;
+        background: #5A8BFF;
+        position: relative;
+    }
+}
+
+.mds-guideLine-head {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &>p {
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+
+        &::before {
+            content: '';
+            width: 3px;
+            margin-right: 20px;
+            background: #5A8BFF;
+        }
+    }
+}
+
+.mds-guideLine-headContent {
+    span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+}
+
+#svgMainAllContainer {
+    border: 1px solid #dddddd;
+    height: 100%;
+    overflow-y: auto;
+
+    .svgMainContainer {
+        padding: 20px 30px;
+        border-bottom: 1px solid #dddddd;
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+.mds-formalMark-rightContent {
+    margin: 10px 0;
+    flex: 1;
+    overflow: hidden;
+
+    .ant-spin-nested-loading {
+        height: 100%;
+    }
+}

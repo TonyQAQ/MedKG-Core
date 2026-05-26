@@ -1,0 +1,26 @@
+@import '../../pages/common.less';
+
+.mds-table-wrap {
+    margin-top: 35px;
+    border-radius: @base-border-radius;
+    box-shadow: @base-box-shadow;
+    min-height: 400px;
+
+    .ant-table-content {
+        min-height: 500px;
+    }
+}
+
+.ant-table-pagination-right {
+    float: unset;
+    text-align: center;
+}
+
+.ant-table .ant-table-tbody>tr>td,
+.ant-table .ant-table-thead>tr>th {
+    padding: 10px 16px;
+}
+
+.ant-table-tbody>tr:nth-child(even)>td {
+    background: #F6F7FB;
+}

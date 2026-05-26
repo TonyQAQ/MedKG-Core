@@ -1,0 +1,191 @@
+@import '../../TaskManagement/executePage/index.less';
+
+.mds-chartsAttach-contentWrap {
+    position: relative;
+}
+
+.mds-chartsAttach-rightWrap {
+    width: 400px;
+    position: fixed;
+    min-width: 400px;
+    border-left: 1px solid #dddddd;
+    right: 0;
+    top: 70px;
+    flex-direction: column;
+    height: calc(100% - 70px);
+    display: flex;
+    background-color: white;
+
+    &>.ant-spin-nested-loading {
+        height: 100%;
+
+        &>.ant-spin-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.mds-chartsAttach-middleWrap {
+    flex: auto;
+    position: relative;
+    margin: 70px 400px 0 260px;
+    overflow: auto;
+    height: 3000px;
+    width: 3000px;
+}
+
+.mds-chartsAttach-middlContent {
+    height: 100%;
+    width: 100%;
+}
+
+.mds-executePage-leftWrap {
+    &>.ant-spin-nested-loading {
+        height: 100%;
+
+        &>.ant-spin-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.charts-trigger {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px -6px 9px 0px;
+}
+
+.charts-trigger:hover {
+    color: #1890ff;
+}
+
+.drageTable {
+    width: 200px;
+    position: absolute;
+    border: 1px solid #dddddd;
+
+    &>thead {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        margin: 0;
+        cursor: grab;
+    }
+
+    &>tbody>tr>td {
+        padding: 2px;
+        text-align: center;
+        cursor: crosshair;
+    }
+
+    &>tbody>tr {
+        &:hover {
+            background-color: rgba(188, 232, 241, 0.3);
+        }
+
+        border: 1px solid #dddddd;
+    }
+
+    &>tbody>tr:first-child {
+        border-top: 0;
+    }
+}
+
+.grabbing>thead {
+    cursor: grabbing !important;
+}
+
+.modal-table-wrap {
+    width: 100%;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+
+    &>thead>tr>td,
+    &>tbody>tr>td {
+        padding: 12px 15px;
+        border-left: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
+    }
+}
+
+.mds-rightList-head,
+.mds-rightList-son {
+    height: 40px;
+    line-height: 40px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &>span {
+        width: 100px;
+        padding: 2px 4px;
+    }
+
+    &>span:nth-child(odd) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.mds-rightList-son {
+    background-color: white;
+}
+
+
+.mds-rightList-btns {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.td-input {
+    width: 180px;
+}
+
+.td-text{
+    width: 240px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+    
+
+.mds-right-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #eaeaea;
+    opacity: 0.4;
+    z-index: 1;
+
+}
+
+.td-inputCurrent {
+    z-index: 2;
+}
+
+#tooltipWrap {
+    height: calc(100% - 70px);
+}
+
+#map {
+    position: fixed;
+    top: 70px;
+    right: 400px;
+    width: 200px;
+    height: 200px;
+    z-index: 100;
+}

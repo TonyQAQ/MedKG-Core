@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<context-param>
+		<param-name>facelets.LIBRARIES</param-name>
+		<param-value>
+			/WEB-INF/facelets/tags/
+		</param-value>
+	</context-param>
+	
+	<!-- 
+	<listener>
+		<listener-class>
+			com.sun.faces.config.ConfigureListener
+		</listener-class>
+	</listener>
+	-->
+	<!--自定义过滤器-->
+	<filter>
+		<filter-name>SystemFilter</filter-name>
+		<filter-class>com.sunsheen.jfids.dsi.sysman.security.login.SystemFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>SystemFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>Seam Filter</filter-name>
+		<filter-class>org.jboss.seam.servlet.SeamFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>Seam Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>SystemPageFilter</filter-name>
+		<filter-class>
+			com.sunsheen.jfids.system.servlet.SystemPageFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>SystemPageFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>tuscany</filter-name>
+		<filter-class>
+			org.apache.tuscany.sca.host.webapp.TuscanyServletFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>tuscany</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>
+			org.jboss.seam.servlet.SeamListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Seam Resource Servlet</servlet-name>
+		<servlet-class>
+			org.jboss.seam.servlet.SeamResourceServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Seam Resource Servlet</servlet-name>
+		<url-pattern>/seam/resource/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Seam Resource Servlet</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+		<param-value>.xhtml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>facelets.DEVELOPMENT</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>SystemInit</servlet-name>
+		<servlet-class>
+			com.sunsheen.jfids.system.init.SystemInit
+		</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SystemInit</servlet-name>
+		<url-pattern>/systemInit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DruidStatView</servlet-name>
+		<servlet-class>
+			com.alibaba.druid.support.http.StatViewServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DruidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>  
+	    <welcome-file>index.xhtml</welcome-file>  
+	</welcome-file-list>
+	
+	<error-page><error-code>400</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>401</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>403</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>404</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>405</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>406</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>407</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>412</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>414</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>500</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>501</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+	<error-page><error-code>502</error-code><location>/com/sunsheen/jfids/dsi/exception/display.xhtml</location></error-page>
+</web-app>

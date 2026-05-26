@@ -1,0 +1,5 @@
+export const NEW_ADD_OR_CANCEL = 'taskMngNewAdd'
+export const SET_EDIT_INFO = 'taskMngSetEditInfo'
+export const SET_PAGE = 'taskMngSetPage'
+export const RESET_STATE = 'taskMngRestState'
+export const SET_TYPECODE = 'taskMngSetTypeCode'

@@ -1,0 +1,5 @@
+export const NEW_ADD_OR_CANCEL = 'sentenceSegmentationTaskNewAdd'
+export const SET_EDIT_INFO = 'sentenceSegmentationTaskSetEditInfo'
+export const SET_PAGE = 'sentenceSegmentationTaskSetPage'
+export const RESET_STATE = 'sentenceSegmentationTaskRestState'
+export const SET_TYPECODE = 'sentenceSegmentationTaskSetTypeCode'

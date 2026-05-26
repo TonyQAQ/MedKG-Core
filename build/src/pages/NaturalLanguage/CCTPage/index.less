@@ -1,0 +1,135 @@
+.mds-marking-middleWrap {
+    flex: 1;
+    overflow: hidden;
+}
+
+.mds-marking-svgPageNation {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.mds-marking-treeWrap {
+    flex: 1;
+    overflow: auto;
+
+    .ant-tree-treenode {
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            display: flex;
+            width: 3px;
+            height: 0;
+            z-index: 1;
+            content: '';
+            background-color: #5A8BFF;
+        }
+    }
+
+    .ant-tree-treenode-selected {
+        &::before {
+            background-color: #e6f7ff !important;
+        }
+
+        &::after {
+            height: 100%;
+            transition: height 0.4s;
+        }
+
+        .ant-tree-node-selected,
+        .ant-tree-switcher {
+            color: #5A8BFF !important;
+        }
+    }
+}
+
+#svgMainAllContainer {
+    border: 1px solid #dddddd;
+    height: 100%;
+    overflow-y: auto;
+    font-size: 16px;
+
+    .svgMainContainer {
+        padding: 20px 30px;
+        border-bottom: 1px solid #dddddd;
+        position: relative;
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+        svg {
+            width: 100%;
+        }
+
+        .ant-radio-button-wrapper {
+            margin: 0 10px;
+            width: 120px;
+            text-align: center;
+            border-radius: 0;
+            margin-bottom: 6px;
+            display: inline-flex;
+            justify-content: center;
+            border-left-width: 1px;
+            border-radius: 5px;
+            font-size: 15px;
+
+            & span:nth-child(2) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+        .ant-radio-button-wrapper:not(:first-child)::before {
+            width: 0;
+        }
+
+    }
+}
+
+.svgMainContainer-slider {
+    padding: 20px 30px;
+    position: relative;
+
+    .ant-row {
+        position: sticky;
+        top: 0px;
+        background-color: white;
+
+        .ant-radio-button-wrapper {
+            margin: 0 10px;
+            width: 120px;
+            text-align: center;
+            border-radius: 0;
+            margin: 6px;
+            display: inline-flex;
+            justify-content: center;
+            border-left-width: 1px;
+            border-radius: 5px;
+            font-size: 15px;
+
+            & span:nth-child(2) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+        .ant-radio-button-wrapper:not(:first-child)::before {
+            width: 0;
+        }
+    }
+}
+
+.site-tree-search-value {
+    color: #f50;
+}
+
+.svgMainContainer-content {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/common/uitl/mq/Rabbitmq.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/database/mgr/dao/Title.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/map/mgr/dao/MapConfigs.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/nlp/common/dao/Config.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/system/org/dao/OrgConfig.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/system/user/dao/UMConfig.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/iaa/service/IAA.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/structure/rdfs/dao/RDF.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/structure/rv/dao/ResultVerificationDao.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/structure/sc/dao/StandardCheckConfig.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/structure/ssm/dao/TaskSSM.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/taskexecute/dao/TaskExecute.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/taskmt/dao/TaskTitle.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/taskready/dao/TaskReady.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/unstructure/mtc/dao/MTC.config=utf-8
+encoding//WebRoot/WEB-INF/component/com/sunsheen/hkks/task/unstructure/ussm/dao/AnnotationFilePath.config=utf-8

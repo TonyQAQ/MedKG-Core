@@ -1,0 +1,126 @@
+.mds-usMarkingTrainingCheck-bodyWrap {
+    padding: 20px 90px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mds-usMarkingTrainingCheck-headWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mds-usMarkingTrainingCheck-middleWrap {
+    margin: 10px 0;
+    flex: 1;
+    overflow: hidden;
+
+    .ant-spin-nested-loading {
+        height: 100%;
+    }
+}
+
+#svgMainAllContainer {
+    border: 1px solid #dddddd;
+    height: 100%;
+    overflow-y: auto;
+
+    .svgMainContainer {
+        padding: 20px 30px;
+        border-bottom: 1px solid #dddddd;
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+        svg {
+            width: 100%;
+        }
+    }
+}
+
+.mds-usMarkingTrainingCheck-btns {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.checkIcon {
+    position: relative;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #5A8BFF;
+    border-radius: 25px;
+
+    &::after,
+    &::before {
+        box-sizing: border-box;
+        position: absolute;
+        height: 2px;
+        background-color: #5A8BFF;
+        display: inline-block;
+        transform-origin: left top;
+        border-radius: 5px;
+        content: '';
+        transition: opacity ease 0.4;
+    }
+
+    &::before {
+        width: 10px;
+        top: 11px;
+        left: 4px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        width: 15px;
+        top: 17px;
+        left: 9px;
+        transform: rotate(-45deg);
+    }
+}
+
+.ant-tag-checkable-checked {
+
+    &::after {
+        background: #fff;
+        animation: checkAfter 0.4s ease 0s forwards;
+    }
+
+
+    &::before {
+        background: #fff;
+        animation: checkABefore 0.2s ease 0s forwards;
+    }
+}
+
+@keyframes checkAfter {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 15px;
+    }
+
+}
+
+@keyframes checkABefore {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 10px;
+    }
+}
+
+.deleteIcon {
+    color: red;
+}
+

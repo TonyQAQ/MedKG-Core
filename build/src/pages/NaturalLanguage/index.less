@@ -1,0 +1,83 @@
+@import '../TaskExecution/index.less';
+
+.mds-taskMng-rowState {
+    display: flex;
+    align-items: center;
+}
+
+.state-icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.wait {
+    background-color: #52c41a;
+    animation: waitAnimation 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes waitAnimation {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+.rule {
+    background-color: #5A8BFF;
+}
+
+.label {
+    background-color: #fba344;
+}
+
+.end {
+    background-color: #696969;
+}
+
+.cancel {
+    background-color: #FFB800;
+}
+
+.mds-datafiltering-modalTableWrap {
+    flex: 1;
+    margin-right: 20px;
+    position: relative;
+
+    .ant-table-wrapper {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.relation-empty {
+    &>.ant-select-selector {
+        border: 1px solid red !important;
+    }
+}
+
+#operators {
+
+    .ant-upload-list {
+        position: absolute;
+        height: 105px;
+        width: 100%;
+        overflow-y: auto;
+        z-index: 1;
+    }
+}
+
+#form_wrap .ant-tabs {
+    overflow: unset;
+}

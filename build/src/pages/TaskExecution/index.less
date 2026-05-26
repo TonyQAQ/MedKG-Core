@@ -1,0 +1,190 @@
+@import '../TaskManagement/index.less';
+@import '../common.less';
+@import '../TaskManagement/ExecutePage/index.less';
+
+.mds-datafiltering-conditionWrap {
+    align-items: center;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.mds-datafiltering-itemWrap {
+    margin-bottom: 5px;
+    display: flex;
+
+    // justify-content: space-between;
+    // .ant-form-item {
+    //     margin-bottom: 10px;
+    // }
+
+    &>label {
+        width: 70px;
+        white-space: nowrap;
+    }
+}
+
+#dynamic_form_item {
+    &>.ant-form-item {
+        margin-bottom: 0;
+
+        &>.ant-form-item-label {
+            width: 80px;
+        }
+    }
+}
+
+.mds-fields-label {
+    width: 100%;
+    white-space: nowrap;
+    position: sticky;
+    margin-bottom: 10px;
+    background-color: white;
+    z-index: 1;
+    height: 30px;
+    line-height: 30px;
+    top: 0;
+}
+
+.svgContainer {
+    padding: 20px 10px 0 10px;
+
+    svg {
+        width: 100%;
+    }
+}
+
+.mds-LabelDefinition-modalBody {
+    height: 100%;
+
+    .mds-LabelDefinition-modalConditionWrap {
+        height: calc(100% - 53px);
+        display: flex;
+        flex-direction: column;
+
+        .ant-radio-group {
+            width: 100%;
+            overflow: auto;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+.mds-LabelDefinition-modalConditionWrap {
+    margin-top: 30px;
+
+    .rc-color-picker-trigger {
+        width: 30px;
+        height: 100%;
+    }
+}
+
+.mds-LabelDefinition-radioWrap {
+    padding-top: 10px;
+
+    .ant-radio-wrapper {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.mds-LabelDefinition-newAddModal {
+    .rc-color-picker-trigger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.trigger {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px -6px 9px 0px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+}
+
+.trigger:hover {
+    color: #1890ff;
+}
+
+.mds-executePage-ulWrap {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 42px;
+    transition: transform .3s cubic-bezier(.7, .3, .1, 1),
+        box-shadow .3s cubic-bezier(.7, .3, .1, 1),
+        -webkit-transform .3s cubic-bezier(.7, .3, .1, 1),
+        -webkit-box-shadow .3s cubic-bezier(.7, .3, .1, 1);
+}
+
+.mds-executePage-ulWrap>ul {
+    flex: 1
+}
+
+.svgContainer:not(:last-child) {
+    border-bottom: 1px solid #dddddd;
+}
+
+.mds-executePage-svgPageNation {
+    text-align: center;
+    width: 100%;
+    background: white;
+    position: sticky;
+    bottom: 0px;
+}
+
+#svgAllContainer {
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 50px;
+
+    .ant-empty {
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.liIcon {
+    cursor: pointer;
+    font-size: 17px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.editIcon {
+    position: absolute;
+    right: 25px;
+    top: 12px;
+}
+
+.deleteIcon {
+    position: absolute;
+    color: red;
+    right: 5px;
+    top: 12px;
+}
+
+.mds-executePage-middleWrap {
+    .ant-spin-nested-loading {
+        height: 100%;
+    }
+}

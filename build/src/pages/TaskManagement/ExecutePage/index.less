@@ -1,0 +1,234 @@
+@import '../../common.less';
+
+.mds-executePage-contentWrap {
+    .ant-spin-container {
+        height: 100%;
+    }
+}
+
+.mds-executePage-wrap {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 90px);
+    background-color: white;
+    margin: 10px 5px 10px 5px;
+    box-shadow: @base-box-shadow;
+    border-radius: @base-border-radius;
+}
+
+.mds-executePage-leftWrap,
+.mds-executePage-rightWrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-width: 250px;
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+
+.mds-executePage-middleWrap {
+    position: relative;
+    flex: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.mds-executePage-RightWrap {
+    position: relative;
+    flex: auto;
+    overflow: auto;
+}
+
+.mds-executePage-conditionWrapL {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.mds-executePage-conditionWrapR:extend(.mds-executePage-conditionWrapL) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    padding: 5px 30px;
+    border-bottom: 1px solid #dddddd;
+    flex-wrap: wrap;
+
+    &>div:nth-child(1) {
+        flex-wrap: wrap;
+        font-weight: 600;
+    }
+}
+
+.checkIcon {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #5A8BFF;
+    border-radius: 25px;
+
+    &::after,
+    &::before {
+        box-sizing: border-box;
+        position: absolute;
+        height: 2px;
+        background-color: #5A8BFF;
+        display: inline-block;
+        transform-origin: left top;
+        border-radius: 5px;
+        content: '';
+        transition: opacity ease 0.4;
+    }
+
+    &::before {
+        width: 10px;
+        top: 11px;
+        left: 4px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        width: 15px;
+        top: 17px;
+        left: 9px;
+        transform: rotate(-45deg);
+    }
+}
+
+.ant-tag-checkable-checked {
+
+    &::after {
+        background: #fff;
+        animation: checkAfter 0.4s ease 0s forwards;
+    }
+
+
+    &::before {
+        background: #fff;
+        animation: checkABefore 0.2s ease 0s forwards;
+    }
+}
+
+@keyframes checkAfter {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 15px;
+    }
+
+}
+
+@keyframes checkABefore {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 10px;
+    }
+}
+
+.mds-executePage-ulWrap {
+    position: relative;
+    top: 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.mds-executePage-liWrap {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    height: 40px;
+    min-height: 40px;
+    line-height: 30px;
+    margin: 10px 10px 0 10px;
+    border-radius: @base-border-radius;
+    padding: 5px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.editIcon {
+    position: absolute;
+    right: 5px;
+    top: 14px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.editInput {
+    width: 223px;
+    margin: 10px 10px 0 10px;
+    border-radius: 5px;
+    height: 40px;
+    z-index: 2;
+}
+
+.mds-executePage-liName {
+    display: inline-block;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mds-executePage-liCurrentSelect {
+    background-color: #fa8c16;
+}
+
+.mds-executePage-liNoSelect {
+    background-color: #a0a0a0;
+}
+
+.mds-executePage-liSelect {
+    background-color: #5A8BFF;
+}
+
+.mds-executePage-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #dddddd;
+}
+
+.liToolTip {
+    .ant-tooltip-inner {
+        span {
+            white-space: nowrap;
+        }
+    }
+}
+
+.edit-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(229, 229, 229, 0.7);
+    z-index: 1;
+}
+
+.infinite-container {
+    width: 300px;
+    height: 300px;
+    overflow-y: auto;
+}
